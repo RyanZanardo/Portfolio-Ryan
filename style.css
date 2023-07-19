@@ -366,6 +366,7 @@ header .nav-bar {
     border-radius: 5px;
     display: flex;
     align-items: center;
+    margin-top: 30px;
     /* Adicionado para alinhar verticalmente */
 }
 
@@ -655,6 +656,7 @@ header .nav-bar {
 /* Footer links */
 
 .footer .footer-links {
+    justify-content: center;
     color: #ffffff;
     margin: 20px 0 12px;
     display: flex;
@@ -961,6 +963,14 @@ header .nav-bar {
       }
 
     /*======== Footer =========*/
+
+    .Serviços{
+        padding-top: 20px;
+    }
+
+    .projetos{
+        padding-top: 30px;
+    }
 }
 
 @media screen and (max-width: 480px) {
