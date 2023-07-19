@@ -1,0 +1,1095 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&family=Rowdies&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+:root {
+    --shadow-back: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --c1: #ffffff;
+    --c4: #CCCCCC;
+    --c2: #141414;
+    --g1: #ECFFEC;
+    --g2: #fff;
+    --main-color: #40E03C;
+    --shadow-back: 0 5px 15px rgba(1, 0, 0, 0.7);
+}
+
+.container {
+    max-width: 1024px;
+
+}
+
+header {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: calc(5rem + 1rem);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s ease;
+    transition-property: height, background;
+}
+
+header.sticky {
+    background-color: var(--c2);
+    box-shadow: var(--shadow-back);
+    padding-bottom: 25px;
+    height: calc(5.5rem + 1rem);
+    backdrop-filter: blur(60px);
+    z-index: 1000;
+}
+
+header.sticky .nav-itens a:hover {
+    color: var(--main-color);
+}
+
+.nav-itens a.activetwo {
+    border-bottom: solid 3px var(--main-color);
+}
+
+header .nav-bar {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    margin: 30px 5% 0 5%;
+}
+
+.nav-close-btn,
+.nav-menu-btn {
+    display: none;
+}
+
+.nav-menu-btn {
+    color: var(--main-color);
+}
+
+.nav-bar .logo {
+    font-family: 'Rowdies', cursive;
+    color: var(--c1);
+    font-size: 1.8em;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.navigation .nav-itens a {
+    font-family: 'Roboto', sans-serif;
+    color: var(--c1);
+    font-size: 1em;
+    transition: 0.4s;
+    padding: 5px;
+    transition-property: background;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+}
+
+.navigation .nav-itens a:hover {
+    color: var(--main-color);
+}
+
+.navigation .nav-itens a i {
+    display: none;
+}
+
+.navigation .nav-itens a:not(:last-child) {
+    margin-right: 45px;
+}
+
+
+/*==== Começo Sessao home =======*/
+
+.Home {
+    background-image: url(./assets/luke-stackpoole-TRXSkmJb40c-unsplash\ 3.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.cont-home img {
+    cursor: pointer;
+    position: absolute;
+    bottom: 70px;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.home-nome {
+    margin-left: -25px;
+    padding: 0 10px;
+    border-left: 12px var(--main-color) solid;
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(90deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(90deg) scale(1.1);
+    }
+
+    100% {
+        transform: rotate(90deg) scale(1);
+    }
+}
+
+.cover {
+    position: absolute;
+    z-index: 0;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.cont-home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.cont-home .home-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cont-home .home-text h1 {
+    color: var(--c1);
+    font-family: 'Rowdies', cursive;
+    text-transform: uppercase;
+    font-size: 6.0rem;
+    line-height: 57px;
+}
+
+.cont-home .home-text h2 {
+    color: var(--c4);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 4.5rem;
+    line-height: 45px;
+}
+
+.cont-home .botao {
+    cursor: pointer;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    height: 50px;
+    width: 160px;
+    background: rgb(44, 191, 41);
+    background: linear-gradient(0deg, rgba(44, 191, 41, 1) 0%, rgba(64, 224, 60, 1) 100%);
+}
+
+.cont-home .botao a{
+    text-decoration: none;
+}
+
+.cont-home .botao:hover {
+    transform: scale(1.1);
+}
+
+.cont-home .botao h3 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    color: #011700;
+}
+
+/*==== Fim Sessao home =======*/
+
+/*==== Começo Sessao Exp =======*/
+.Exp {
+    background-color: #060606;
+    padding-top: 150px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.Exp .cont-exp {
+    /* Alterado para centralizar horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5%;
+    gap: 150px;
+}
+
+.Exp .cont-exp .tittle-exp {
+    width: 40%;
+    /* Ajuste na largura */
+}
+
+
+.Exp .cont-exp .tittle-exp h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 5.0rem;
+    text-transform: uppercase;
+    color: var(--c1);
+    line-height: 55px;
+}
+
+.Exp .cont-exp .tittle-exp h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.0rem;
+    color: var(--c4);
+    padding-top: 5px;
+}
+
+.Exp .cont-exp .text-exp {
+    /* Ajuste na largura */
+    background-color: #141414;
+    width: 60%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    line-height: 22px;
+    padding: 30px;
+    border-radius: 5px;
+    color: #F0F0F0;
+    box-shadow: var(--shadow-back);
+}
+
+.Exp .cont-exp .text-exp span {
+    color: var(--main-color);
+}
+
+.Exp .cont-exp .text-exp .text2-exp {
+    padding-top: 15px;
+}
+
+.Exp .cont-exp .text-exp .text2-exp h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.0rem;
+    color: var(--main-color);
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.Exp .cont-exp .text-exp .text2-exp p {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 3px;
+    color: #F0F0F0;
+}
+
+.text3-exp {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*==== Fim Sessao Exp =======*/
+
+
+/*==== Começo Sesao Serviços =======*/
+.Serviços {
+   
+    background-color: #060606;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+.cont-serv {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 5%;
+}
+
+.tiitle-serv .tittle h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 5.0rem;
+    text-transform: uppercase;
+    color: var(--c1);
+    line-height: 55px;
+}
+
+.tiitle-serv .tittle h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.0rem;
+    color: var(--c4);
+    padding-top: 5px;
+
+}
+
+.cont-serv .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 70px;
+}
+
+.card-serv {
+    width: 320px;
+    height: 240px;
+    background-color: #141414;
+    box-shadow: var(--shadow-back);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    /* Adicionado para alinhar verticalmente */
+}
+
+.card-serv .cont-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10%;
+    gap: 20px;
+}
+
+.card-serv .cont-card span {
+    font-size: 50px;
+    color: var(--main-color);
+}
+
+.cont-card .text-card h3 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--c1);
+}
+
+.cont-card .text-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: var(--c4);
+}
+
+.cont-card .text-card {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+}
+
+.cont-card .text-card .line li {
+    position: relative;
+    top: -10px;
+    display: inline-block;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    height: 3px;
+}
+
+.cont-card .text-card .line li:nth-of-type(1) {
+    width: 34px;
+}
+
+.cont-card .text-card .line li:nth-of-type(2) {
+    width: 14px;
+}
+
+/*==== Fim Sesao Serviços =======*/
+
+
+/*==== Começo Sesao Projetos =======*/
+.projetos {
+    padding-top: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #060606;
+    padding-bottom: 200px;
+}
+
+.cont-proj {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 5%;
+}
+
+.cont-port {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.tittle-proj {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 5%;
+}
+
+.tiitle-proj h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 5.0rem;
+    text-transform: uppercase;
+    color: var(--c1);
+    line-height: 55px;
+}
+
+.tiitle-proj h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.0rem;
+    color: var(--c4);
+    padding-top: 5px;
+    font-style: normal;
+}
+
+.tittle2-proj {
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-proj {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    gap: 15px;
+    color: var(--c4);
+    align-items: center;
+}
+
+.check-proj p {
+    font-size: 2.0rem;
+    font-weight: 700;
+}
+
+.check-proj span {
+    font-size: 3.0rem;
+    cursor: pointer;
+}
+
+.num {
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    position: absolute;
+    right: -25px;
+    top: 275px;
+    border-radius: 5px;
+    display: flex;
+    /* Adicione essa propriedade para usar o flexbox */
+    align-items: center;
+    /* Centralizar verticalmente */
+    justify-content: center;
+    /* Centralizar horizontalmente */
+}
+
+.num p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.0rem;
+    text-align: center;
+}
+
+.card-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 5px;
+    border: solid 2px var(--c4);
+}
+
+.card-container::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.card .img-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+}
+
+.card .img-content svg {
+    width: 50px;
+    height: 50px;
+    fill: #e8e8e8;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card .content .heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--c1);
+}
+
+.card .content p {
+    color: var(--c4);
+    font-family: 'Roboto', sans-serif;
+}
+
+.card:hover .content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover .img-content {
+    scale: 2.5;
+    rotate: 30deg;
+    filter: blur(7px);
+}
+
+.card:hover .img-content svg {
+    fill: transparent;
+}
+
+/*==== Fim Sesao Projetos =======*/
+
+
+/*==== Começo Sesao Footer =======*/
+.footer {
+    padding-top: 100px;
+    background-color: var(--c2);
+    box-sizing: border-box;
+    width: 100%;
+    font: bold 16px sans-serif;
+    box-shadow: var(--shadow-back);
+    display: flex;
+    justify-content: center;
+}
+
+.cntro-foot {
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    margin: 0 5%;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer .footer-left {
+    width: 35%;
+}
+
+.footer h3 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-family: 'Rowdies', cursive;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+.footer h3 span {
+    color: var(--withe);
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Footer links */
+
+.footer .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer .footer-links span {
+    color: var(--main-color);
+}
+
+.footer .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    color: var(--c4);
+}
+
+.footer .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer .footer-center {
+    width: 35%;
+}
+.foot {
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-center .i {
+    background-color: #33383b;
+    color: var(--main-color);
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer .footer-center .i {
+    font-size: 2.5rem;
+    line-height: 38px;
+}
+
+.footer .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer .footer-center p a {
+    color: var(--withe);
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footer .footer-right {
+    width: 30%;
+}
+
+.footer .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer .footer-icons {
+    margin-top: 25px;
+}
+
+.footer .footer-icons a {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 2px;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+/*==== Fim Sesao Footer =======*/
+
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    position: relative;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/*==== Media queries (Max-widith 785px) =======*/
+
+@media screen and (max-width: 950px) {
+
+    /*======== Exp =========*/
+    .Exp .cont-exp {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 5%;
+        gap: 80px;
+    }
+
+    .Exp .cont-exp .tittle-exp {
+        margin: 0;
+        width: 100%;
+        /* Ajuste na largura */
+    }
+
+    .Exp {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+    }
+
+    .Exp .cont-exp .text-exp {
+        /* Ajuste na largura */
+        width: 100%;
+    }
+
+    /*======== Exp =========*/
+
+    /*======== Serviços =========*/
+    .cont-serv {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*======== Serviços =========*/
+
+    /*======== Projetos =========*/
+    .cont-proj {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tittle2-proj {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .check-proj {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        align-items: center;
+    }
+
+    /*======== Projetos =========*/
+}
+
+
+@media screen and (max-width: 850px) {
+    header .nav-bar {
+        padding: 0 60px;
+    }
+
+    section {
+        padding: 160px 60px;
+    }
+
+    /*======== Navigation Menu =========*/
+    .nav-menu-btn {
+        display: block;
+        font-size: 2.5em;
+        cursor: pointer;
+    }
+
+    .nav-close-btn {
+        display: block;
+        font-size: 2.5em;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 10px;
+        transition: 0.3s ease;
+        filter: invert(1);
+    }
+
+    .navigation {
+        z-index: 99999;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.55);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .navigation.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navigation .nav-itens {
+        position: relative;
+        background: var(--c2);
+        width: 400px;
+        max-width: 400px;
+        display: grid;
+        place-content: center;
+        margin: 20px;
+        padding: 40px;
+        box-shadow: var(--shadow-back);
+        border-radius: 20px;
+        transform: translateY(-100px);
+        transition: 0.3s ease;
+    }
+
+    .navigation.active .nav-itens {
+        transform: translateY(0);
+    }
+
+    .navigation .nav-itens a:hover {
+        color: var(--main-color);
+    }
+
+    .navigation .nav-itens a {
+        color: var(--main-color);
+        font-size: 1.2em;
+        margin: 15px 50px;
+        transition: 0.3s ease;
+    }
+
+    .navigation .nav-itens a:hover {
+        color: var(--text-color);
+    }
+
+    .navigation .nav-itens a i {
+        display: inline-block;
+        font-size: 1.3em;
+        margin-right: 5px;
+    }
+
+    /*==== Fim Sessao Header =======*/
+
+    /*======== Footer =========*/
+    .cntro-foot {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer .footer-left,
+    .footer .footer-center,
+    .footer .footer-right {
+        width: 100%;
+    }
+
+    .foot{
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+    /*======== Footer =========*/
+}
+
+@media screen and (max-width: 480px) {
+
+    .cont-home img {
+        cursor: pointer;
+        position: absolute;
+        bottom: 0px;
+        left: 49%;
+        transform: translateX(-50%);
+        animation-name: pulse;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .Exp .cont-exp .text-exp {
+        /* Ajuste na largura */
+        background-color: #141414;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.8rem;
+        line-height: 22px;
+        border-radius: 5px;
+        color: #F0F0F0;
+        box-shadow: var(--shadow-back);
+    }
+
+    .Exp .cont-exp .tittle-exp {
+        width: 100%;
+        /* Ajuste na largura */
+    }
+
+    .Exp .cont-exp {
+        /* Alterado para centralizar horizontalmente */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5%;
+        gap: 100px;
+    }
+
+    .Exp {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    .cont-home {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    .cont-home .home-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cont-home .home-text h1 {
+        color: var(--c1);
+        font-family: 'Rowdies', cursive;
+        text-transform: uppercase;
+        font-size: 5.0rem;
+        line-height: 47px;
+    }
+
+    .cont-home .home-text h2 {
+        color: var(--c4);
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 3.5rem;
+        line-height: 35px;
+    }
+
+    .cont-home .botao {
+        cursor: pointer;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        height: 50px;
+        width: 160px;
+        background: rgb(44, 191, 41);
+        background: linear-gradient(0deg, rgba(44, 191, 41, 1) 0%, rgba(64, 224, 60, 1) 100%);
+    }
+
+    .Home {
+        width: 100%;
+        height: 100vh;
+        background-color: #060606;
+    }
+
+    .cont-home img {
+        cursor: pointer;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        width: 30px;
+        transform: translateX(-50%);
+        animation-name: pulse;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .cont-home img {
+        cursor: pointer;
+        position: absolute;
+        bottom: 70px;
+        left: 46%;
+        transform: translate(-50%, -50%);
+        animation-name: pulse;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+
+    .Serviços{
+        padding-top: 10px;
+    }
+
+    .projetos {
+        padding-top: 10px;
+    }
+
+}
