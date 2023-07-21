@@ -656,7 +656,6 @@ header .nav-bar {
 /* Footer links */
 
 .footer .footer-links {
-    justify-content: center;
     color: #ffffff;
     margin: 20px 0 12px;
     display: flex;
@@ -955,6 +954,11 @@ header .nav-bar {
     .footer .footer-center,
     .footer .footer-right {
         width: 100%;
+    }
+    
+     .footer-links{
+        display: flex;
+        justify-content: center;
     }
 
     .foot{
